@@ -9,7 +9,7 @@ No special requirements to install this module.
 
 ### Composer
 If your site is [managed via Composer](https://www.drupal.org/node/2718229), use Composer to
-download the module, which will also download the required library:
+download the module.:
    ```sh
    composer require "drupal/mathematical_lexer_parser"
    ```
