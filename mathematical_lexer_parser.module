@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains mathematical_lexer_parser.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mathematical_lexer_parser_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        // Main module help for the mathematical_lexer_parser module.
+        case 'help.page.mathematical_lexer_parser':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Create a simple (plus / minus / multiplication / division) mathematical Lexer and Parser') . '</p>';
+            return $output;
+
+        default:
+    }
+}
+/**
+ * Implements hook_theme().
+ */
+function mathematical_lexer_parser_theme()
+{
+    return [
+        'mathematical_lexer_parser' => [
+            'variables' => [
+                'expression' => NULL,
+                'result' => NULL
+            ],
+        ],
+    ];
+}

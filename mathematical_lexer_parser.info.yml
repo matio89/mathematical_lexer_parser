@@ -1,0 +1,5 @@
+name: 'Mathematical Lexer Parser'
+type: module
+description: 'Create a simple (plus / minus / multiplication / division) mathematical Lexer and Parser service and make it available as a text formatter plugin in Drupal 8'
+core: 8.x
+package: 'Math'

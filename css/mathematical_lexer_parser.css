@@ -1,0 +1,11 @@
+a.formula{
+    color: #000!important;
+    border: 0 !important;
+}
+div.result-mathematical-lexer-parser div.result-calculate {
+    display: none;
+}
+
+a.formula:hover + div.result-calculate{
+    display: block;
+}

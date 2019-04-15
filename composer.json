@@ -1,0 +1,21 @@
+{
+  "name": "drupal/mathematical_lexer_parser",
+  "type": "drupal-module",
+  "description": "Create a simple (plus / minus / multiplication / division) mathematical Lexer and Parser",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/mathematical_lexer_parser",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/mathematical_lexer_parser",
+    "source": "http://cgit.drupalcode.org/mathematical_lexer_parser"
+  },
+  "authors": [
+    {
+      "name": "Mohamed Anis Taktak (matio89)",
+      "homepage": "https://www.drupal.org/u/matio89",
+      "role": "Maintainer"
+    }
+  ],
+  "require": { }
+}

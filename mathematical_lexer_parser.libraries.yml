@@ -1,0 +1,5 @@
+mathematical_lexer_parser.base:
+  version: VERSION
+  css:
+    theme:
+      css/mathematical_lexer_parser.css: {}

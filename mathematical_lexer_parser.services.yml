@@ -1,0 +1,3 @@
+services:
+    mathematical_lexer_parser.default:
+      class: Drupal\mathematical_lexer_parser\MathematicalLexerParserService
