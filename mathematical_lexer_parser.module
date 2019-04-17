@@ -31,8 +31,10 @@ function mathematical_lexer_parser_theme()
     return [
         'mathematical_lexer_parser' => [
             'variables' => [
-                'expression' => NULL,
-                'result' => NULL
+                'label_formula' => NULL,
+                'formula' => NULL,
+                'label_result' => NULL,
+                'result' => NULL,
             ],
         ],
     ];

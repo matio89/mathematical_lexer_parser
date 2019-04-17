@@ -61,7 +61,7 @@ class MathematicalLexerParserTest extends UnitTestCase
 
     /**
      * Test if expressions are equals with result.
-     * @param $output
+     * @param $expected
      * @param $expression
      * @dataProvider  expressionsDataProvider
      */
