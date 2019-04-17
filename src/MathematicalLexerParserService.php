@@ -95,7 +95,7 @@ class MathematicalLexerParserService implements MathematicalLexerParserServiceIn
 
         while ($i < strlen($mathexp)) {
             $char = $mathexp{$i};
-            if (is_numeric($char)) {
+            if ($this->is_number($char)) {
 
                 $num = $this->read_number($mathexp, $i);
                 array_push($final_stack, $num);
@@ -143,7 +143,7 @@ class MathematicalLexerParserService implements MathematicalLexerParserServiceIn
     function read_number($string, $i)
     {
         $number = '';
-        while ($i < strlen($string) && is_numeric($string{$i})) {
+        while ($i < strlen($string) && $this->is_number($string{$i})) {
             $number .= $string{$i};
             $i++;
         }
