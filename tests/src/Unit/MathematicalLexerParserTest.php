@@ -70,4 +70,31 @@ class MathematicalLexerParserTest extends UnitTestCase
         $this->assertEquals($expected, $this->mathematicalLexerParser->calculate($expression));
     }
 
+
+    /**
+     * Data Provider all expressions with result.
+     * @return array
+     */
+    public function infixDataProvider()
+    {
+        return [
+            ['11+', '1+1'],
+            ['115*+', '1+1*5'],
+            ['1020+30-155*+', '10+20-30+15*5'],
+        ];
+    }
+
+    /**
+     * Test if expressions are equals with result.
+     * @param $expected
+     * @param $expression
+     * @dataProvider  infixDataProvider
+     */
+    public function testInfixExpression($expected, $expression)
+    {
+        $data = $this->mathematicalLexerParser->mathexp_to_rpn($expression);
+        $data = implode('',$data);
+        $this->assertEquals($expected,$data );
+    }
+
 }
