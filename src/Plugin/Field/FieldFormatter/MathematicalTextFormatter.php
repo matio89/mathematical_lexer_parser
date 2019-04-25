@@ -101,23 +101,20 @@ class MathematicalTextFormatter extends FormatterBase implements ContainerFactor
         ];
         return $elements;
     }
-
     /**
      * {@inheritdoc}
      */
-    public function settingsSummary()
-    {
+    public function settingsSummary() {
         $summary = [];
 
         if ($this->getSetting('label_formula')) {
-            $summary[] = t('label Formula is :formula', [':formula' => $this->getSetting('label_formula')]);
+            $summary[] = t('label Formula is :formula',[':formula' => $this->getSetting('label_formula')]);
         }
         if ($this->getSetting('label_result')) {
-            $summary[] = t('label Result is :result', [':result' => $this->getSetting('label_result')]);
+            $summary[] = t('label Result is :result',[':result' => $this->getSetting('label_result')]);
         }
         return $summary;
     }
-
     /**
      * {@inheritdoc}
      */
@@ -128,14 +125,18 @@ class MathematicalTextFormatter extends FormatterBase implements ContainerFactor
         foreach ($items as $delta => $item) {
             $elements[$delta] = [
                 '#theme' => 'mathematical_lexer_parser',
-                '#formula' => $item->value,
-                '#label_formula' => $this->getSetting('label_formula'),
-                '#result' => $this->mathematical_lexer_parser->calculate($item->value),
-                '#label_result' => $this->getSetting('label_result'),
                 '#attached' => [
                     'library' => [
                         'mathematical_lexer_parser/mathematical_lexer_parser.base',
                     ],
+                    'drupalSettings' => [
+                        'results' => [
+                            'formula' => $item->value,
+                            'label_formula' => $this->getSetting('label_formula'),
+                            'calculation' => $this->mathematical_lexer_parser->calculate($item->value),
+                            'label_result' => $this->getSetting('label_result')
+                        ]
+                    ]
                 ],
             ];
         }

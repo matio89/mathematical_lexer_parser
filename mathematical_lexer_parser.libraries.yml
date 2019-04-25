@@ -3,3 +3,13 @@ mathematical_lexer_parser.base:
   css:
     theme:
       css/mathematical_lexer_parser.css: {}
+react:
+  version: 1.x
+  js:
+    https://unpkg.com/react@16/umd/react.production.min.js: { external: true, minified: true }
+    https://unpkg.com/react-dom@16/umd/react-dom.production.min.js: { external: true, minified: true }
+    https://unpkg.com/babel-standalone@6.15.0/babel.min.js: { external: true, minified: true }
+react-app:
+  version: 1.0.0
+  js:
+    js/app.js: { preprocess: 0, attributes: { type: text/babel } }

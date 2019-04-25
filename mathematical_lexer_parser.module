@@ -30,12 +30,8 @@ function mathematical_lexer_parser_theme()
 {
     return [
         'mathematical_lexer_parser' => [
-            'variables' => [
-                'label_formula' => NULL,
-                'formula' => NULL,
-                'label_result' => NULL,
-                'result' => NULL,
-            ],
+            'variables' => [],
+            'template' => 'mathematical-lexer-parser',
         ],
     ];
 }

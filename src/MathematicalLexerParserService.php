@@ -133,6 +133,7 @@ class MathematicalLexerParserService implements MathematicalLexerParserServiceIn
             array_push($final_stack, $oper);
         }
         return $final_stack;
+
     }
 
     /**
